@@ -1,0 +1,18 @@
+C:\Documents and Settings\Administrator\My Documents\My Dropbox\Projects\DataViewer\Admin\bin\Admin.dll
+C:\Documents and Settings\Administrator\My Documents\My Dropbox\Projects\DataViewer\Admin\bin\Admin.pdb
+C:\Documents and Settings\Administrator\My Documents\My Dropbox\Projects\DataViewer\Admin\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\My Dropbox\Projects\DataViewer\Admin\obj\Debug\Admin.dll
+C:\Documents and Settings\Administrator\My Documents\My Dropbox\Projects\DataViewer\Admin\obj\Debug\Admin.pdb
+C:\Users\Dedrick\Documents\My Dropbox\Projects\DataViewer\Admin\bin\Admin.dll
+C:\Users\Dedrick\Documents\My Dropbox\Projects\DataViewer\Admin\bin\Admin.pdb
+C:\Users\Dedrick\Documents\My Dropbox\Projects\DataViewer\Admin\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Dedrick\Documents\My Dropbox\Projects\DataViewer\Admin\obj\Debug\Admin.dll
+C:\Users\Dedrick\Documents\My Dropbox\Projects\DataViewer\Admin\obj\Debug\Admin.pdb
+C:\Users\Dedrick\Documents\My Dropbox\Projects\DataViewer\Admin\bin\DataViewer.dll
+C:\Users\Dedrick\Documents\My Dropbox\Projects\DataViewer\Admin\bin\Model.dll
+C:\Users\Dedrick\Documents\My Dropbox\Projects\DataViewer\Admin\bin\DataViewer.pdb
+C:\Users\Dedrick\Documents\My Dropbox\Projects\DataViewer\Admin\bin\Model.pdb
+C:\Documents and Settings\Administrator\My Documents\My Dropbox\Projects\DataViewer\Admin\bin\DataViewer.dll
+C:\Documents and Settings\Administrator\My Documents\My Dropbox\Projects\DataViewer\Admin\bin\Model.dll
+C:\Documents and Settings\Administrator\My Documents\My Dropbox\Projects\DataViewer\Admin\bin\DataViewer.pdb
+C:\Documents and Settings\Administrator\My Documents\My Dropbox\Projects\DataViewer\Admin\bin\Model.pdb

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataSyncModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="DataSyncEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TaskMasters" EntityType="DataSyncModel.TaskMaster" />
+    <EntitySet Name="UserMasters" EntityType="DataSyncModel.UserMaster" />
+    <EntitySet Name="UserMasterMetadatas" EntityType="DataSyncModel.UserMasterMetadata" />
+    <EntitySet Name="Status" EntityType="DataSyncModel.Status" />
+    <AssociationSet Name="FK_TaskMaster_Status" Association="DataSyncModel.FK_TaskMaster_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="TaskMaster" EntitySet="TaskMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TaskMaster_UserMaster" Association="DataSyncModel.FK_TaskMaster_UserMaster">
+      <End Role="UserMaster" EntitySet="UserMasters" />
+      <End Role="TaskMaster" EntitySet="TaskMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserMaster_Status" Association="DataSyncModel.FK_UserMaster_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="UserMaster" EntitySet="UserMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserMasterMetadata_UserMaster" Association="DataSyncModel.FK_UserMasterMetadata_UserMaster">
+      <End Role="UserMaster" EntitySet="UserMasters" />
+      <End Role="UserMasterMetadata" EntitySet="UserMasterMetadatas" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TaskMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Guid" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Detail" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="StatusId" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedDate" />
+    <Property Type="String" Name="Prority" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="UserId" />
+    <NavigationProperty Name="Status" Relationship="DataSyncModel.FK_TaskMaster_Status" FromRole="TaskMaster" ToRole="Status" />
+    <NavigationProperty Name="UserMaster" Relationship="DataSyncModel.FK_TaskMaster_UserMaster" FromRole="TaskMaster" ToRole="UserMaster" />
+  </EntityType>
+  <EntityType Name="UserMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Guid" Name="Id" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="StatusId" Nullable="false" />
+    <NavigationProperty Name="TaskMasters" Relationship="DataSyncModel.FK_TaskMaster_UserMaster" FromRole="UserMaster" ToRole="TaskMaster" />
+    <NavigationProperty Name="Status" Relationship="DataSyncModel.FK_UserMaster_Status" FromRole="UserMaster" ToRole="Status" />
+    <NavigationProperty Name="UserMasterMetadatas" Relationship="DataSyncModel.FK_UserMasterMetadata_UserMaster" FromRole="UserMaster" ToRole="UserMasterMetadata" />
+  </EntityType>
+  <EntityType Name="UserMasterMetadata">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Guid" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Value" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="UserId" />
+    <NavigationProperty Name="UserMaster" Relationship="DataSyncModel.FK_UserMasterMetadata_UserMaster" FromRole="UserMasterMetadata" ToRole="UserMaster" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Guid" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Value" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TaskMasters" Relationship="DataSyncModel.FK_TaskMaster_Status" FromRole="Status" ToRole="TaskMaster" />
+    <NavigationProperty Name="UserMasters" Relationship="DataSyncModel.FK_UserMaster_Status" FromRole="Status" ToRole="UserMaster" />
+  </EntityType>
+  <Association Name="FK_TaskMaster_Status">
+    <End Type="DataSyncModel.Status" Role="Status" Multiplicity="1" />
+    <End Type="DataSyncModel.TaskMaster" Role="TaskMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TaskMaster">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TaskMaster_UserMaster">
+    <End Type="DataSyncModel.UserMaster" Role="UserMaster" Multiplicity="0..1" />
+    <End Type="DataSyncModel.TaskMaster" Role="TaskMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserMaster">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TaskMaster">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserMaster_Status">
+    <End Type="DataSyncModel.Status" Role="Status" Multiplicity="1" />
+    <End Type="DataSyncModel.UserMaster" Role="UserMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserMaster">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserMasterMetadata_UserMaster">
+    <End Type="DataSyncModel.UserMaster" Role="UserMaster" Multiplicity="0..1" />
+    <End Type="DataSyncModel.UserMasterMetadata" Role="UserMasterMetadata" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserMaster">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserMasterMetadata">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

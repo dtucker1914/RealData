@@ -1,0 +1,272 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="using" priority="10" />
+      <Item value="Model" priority="13" />
+      <Item value="Task`0" priority="8" />
+      <Item value="var" priority="26" />
+      <Item value="new" priority="30" />
+      <Item value="TaskController`0" priority="0" />
+      <Item value="Html" priority="3" />
+      <Item value="statuses" priority="0" />
+      <Item value="Status`0" priority="13" />
+      <Item value="_newStatus" priority="17" />
+      <Item value="Guid`0" priority="4" />
+      <Item value="StatusController`0" priority="1" />
+      <Item value="System" priority="1" />
+      <Item value="Data" priority="1" />
+      <Item value="EntityModel" priority="0" />
+      <Item value="SchemaObjectModel" priority="0" />
+      <Item value="Entity" priority="0" />
+      <Item value="DataViewerEntities`0" priority="21" />
+      <Item value="status" priority="0" />
+      <Item value="_status" priority="0" />
+      <Item value="Status" priority="0" />
+      <Item value="_newContext" priority="9" />
+      <Item value="inputStatus" priority="1" />
+      <Item value="None" priority="0" />
+      <Item value="User`0" priority="3" />
+      <Item value="UserMetadata`0" priority="0" />
+      <Item value="TaskMetadata`0" priority="0" />
+      <Item value="_newTask" priority="8" />
+      <Item value="_newTaskM" priority="0" />
+      <Item value="_newUserM" priority="0" />
+      <Item value="try" priority="0" />
+      <Item value="s" priority="1" />
+      <Item value="throw" priority="0" />
+      <Item value="Exception" priority="0" />
+      <Item value="DataViewer" priority="4" />
+      <Item value="_taskModelView" priority="3" />
+      <Item value="public" priority="10" />
+      <Item value="class" priority="2" />
+      <Item value="HttpGetAttribute`0" priority="2" />
+      <Item value="AppDomainSetup`0" priority="0" />
+      <Item value="IEnumerable" priority="6" />
+      <Item value="SelectListItem`0" priority="9" />
+      <Item value="from" priority="4" />
+      <Item value="_context" priority="2" />
+      <Item value="select" priority="4" />
+      <Item value="IQueryable" priority="3" />
+      <Item value="_list" priority="4" />
+      <Item value="Models.Extenison" priority="0" />
+      <Item value="foreach" priority="2" />
+      <Item value="_listItem" priority="4" />
+      <Item value="SelectList`0" priority="0" />
+      <Item value="_selectList" priority="0" />
+      <Item value="enum" priority="0" />
+      <Item value="Int32`0" priority="0" />
+      <Item value="int" priority="0" />
+      <Item value="Models" priority="1" />
+      <Item value="Extended.Enums" priority="0" />
+      <Item value="ProrityEnums`0" priority="9" />
+      <Item value="List" priority="6" />
+      <Item value="NewsStyleUriParser`0" priority="0" />
+      <Item value="_prorityEnums" priority="0" />
+      <Item value="prorityEnumses" priority="1" />
+      <Item value="__listEnum" priority="0" />
+      <Item value="false" priority="1" />
+      <Item value="prorityEnumse" priority="6" />
+      <Item value="_item" priority="2" />
+      <Item value="_pList" priority="0" />
+      <Item value="task" priority="0" />
+      <Item value="_task" priority="3" />
+      <Item value="ActionResult`0" priority="0" />
+      <Item value="inputTask" priority="6" />
+      <Item value="_newContent" priority="2" />
+      <Item value="_newUser" priority="3" />
+      <Item value="PlatformID`0" priority="0" />
+      <Item value="UserViewModel`0" priority="0" />
+      <Item value="statu" priority="1" />
+      <Item value="Extenison" priority="0" />
+      <Item value="StandardDataModel" priority="0" />
+      <Item value="x" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.HtmlHelper`1">
+      <Item value="TextArea`0" priority="0" />
+      <Item value="DropDownList`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Model.Status">
+      <Item value="IDGUID" priority="2" />
+      <Item value="Name" priority="2" />
+      <Item value="Value" priority="1" />
+      <Item value="PropertyChanging" priority="1" />
+      <Item value="PropertyChanged" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Guid">
+      <Item value="NewGuid`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Guid">
+      <Item value="ToString`0" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Model.DataViewerEntities">
+      <Item value="AddToStatus`0" priority="6" />
+      <Item value="Status" priority="4" />
+      <Item value="SaveChanges`0" priority="3" />
+      <Item value="Tasks" priority="1" />
+      <Item value="TaskMetadatas" priority="0" />
+      <Item value="AddToUserMetadatas`0" priority="0" />
+      <Item value="UserMetadatas" priority="0" />
+      <Item value="AddObject`0" priority="1" />
+      <Item value="CreateObjectSet`1" priority="0" />
+      <Item value="AddToTasks`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Objects.ObjectSet`1">
+      <Item value="AddObject`0" priority="7" />
+      <Item value="SingleOrDefault`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="Message" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Model.Task">
+      <Item value="Status" priority="3" />
+      <Item value="IDGUID" priority="2" />
+      <Item value="Prority" priority="2" />
+      <Item value="Name" priority="1" />
+      <Item value="UserID" priority="0" />
+      <Item value="Detail" priority="1" />
+      <Item value="StatusID" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DataViewer.Controllers.TaskViewModel">
+      <Item value="Task" priority="1" />
+      <Item value="AllStatus" priority="1" />
+      <Item value="AllPrority" priority="1" />
+      <Item value="AllTask" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Model.Status">
+      <Item value="EntityKeyPropertyName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="SingleOrDefault`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="ToSelectListItems`0" priority="2" />
+      <Item value="AsEnumerable`1" priority="0" />
+      <Item value="ToList`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="ToSelectListItems`0" priority="2" />
+      <Item value="OrderBy`2" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="AsEnumerable`1" priority="3" />
+      <Item value="ToList`1" priority="0" />
+      <Item value="Add`0" priority="0" />
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.SelectListItem">
+      <Item value="Selected" priority="2" />
+      <Item value="Text" priority="1" />
+      <Item value="Value" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DataViewer.Models.Extended.Enums.ProrityEnums">
+      <Item value="ToString`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Model.User">
+      <Item value="IDGUID" priority="0" />
+      <Item value="FirstName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Admin.Controllers.UserViewModel">
+      <Item value="AllStatus" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StandardDataModel.Task">
+      <Item value="Id" priority="0" />
+      <Item value="Name" priority="0" />
+      <Item value="Status" priority="2" />
+      <Item value="Prority" priority="0" />
+      <Item value="User" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StandardDataModel.Status">
+      <Item value="Id" priority="0" />
+      <Item value="Name" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@StandardDataModel.Status">
+      <Item value="EntityKeyPropertyName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StandardDataModel.StandardModelContainer">
+      <Item value="Status" priority="0" />
+      <Item value="Users" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StandardDataModel.User">
+      <Item value="Id" priority="1" />
+      <Item value="LastName" priority="0" />
+      <Item value="FirstName" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Views/d:Task/f:Index.aspx" caret="283" fromTop="6" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Views/d:Task/f:Create.aspx" caret="347" fromTop="11" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Models/d:Extended/d:Enums/f:ProrityEnums.cs" caret="263" fromTop="12" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Views/d:Status/f:Create.aspx" caret="720" fromTop="10" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Models/d:Extenison/f:SelectListDropdown.cs" caret="797" fromTop="14" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Views/d:Shared/f:Default.Master.cs" caret="330" fromTop="13" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/f:Global.asax.cs" caret="0" fromTop="0" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Views/f:Web.config" caret="1319" fromTop="26" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/f:Web.config" caret="161" fromTop="3" />
+      <File id="7F79884B-4B28-4ECF-927B-9B4B3C45C2A3/f:App.Config" caret="533" fromTop="4" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:StatusController.cs" caret="1633" fromTop="10" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:UserController.cs" caret="988" fromTop="35" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Views/d:Shared/f:Default.Master" caret="1043" fromTop="15" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Content/d:css/d:mint_idea/d:css/f:screen.css" caret="0" fromTop="0" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Content/d:css/d:mint_idea/d:css/f:msie.css" caret="0" fromTop="0" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Views/d:Home/f:Index.aspx" caret="822" fromTop="11" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:HomeController.cs" caret="417" fromTop="4" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:TaskController.cs" caret="1314" fromTop="20" />
+      <File id="7F79884B-4B28-4ECF-927B-9B4B3C45C2A3/f:StandardModel.edmx.sql" caret="398" fromTop="6" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:HomeController.cs" caret="1053" fromTop="11" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Views/d:Home/f:Index.aspx" caret="1185" fromTop="23" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Views/d:Home/f:Index.aspx" caret="1185" fromTop="30" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Views/d:Home/f:Index.aspx" caret="1147" fromTop="27" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Views/d:Home/f:Index.aspx" caret="915" fromTop="17" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:HomeController.cs" caret="1161" fromTop="18" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:HomeController.cs" caret="1391" fromTop="23" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Views/d:Home/f:Index.aspx" caret="1205" fromTop="20" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Views/d:Home/f:Index.aspx" caret="397" fromTop="7" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:TaskController.cs" caret="1689" fromTop="18" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:TaskController.cs" caret="1467" fromTop="17" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:StatusController.cs" caret="1193" fromTop="10" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:TaskController.cs" caret="1253" fromTop="6" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:HomeController.cs" caret="601" fromTop="7" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:StatusController.cs" caret="1350" fromTop="21" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:UserController.cs" caret="14832" fromTop="16" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/f:Web.config" caret="2010" fromTop="24" />
+      <File id="7F79884B-4B28-4ECF-927B-9B4B3C45C2A3/f:App.Config" caret="523" fromTop="4" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:StatusController.cs" caret="1602" fromTop="11" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:UserController.cs" caret="944" fromTop="14" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:UserController.cs" caret="1217" fromTop="18" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Views/d:Shared/f:Default.Master" caret="937" fromTop="15" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Views/d:Home/f:Index.aspx" caret="249" fromTop="3" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:TaskController.cs" caret="1314" fromTop="13" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:TaskController.cs" caret="1253" fromTop="2" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:TaskController.cs" caret="1253" fromTop="17" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Views/d:Home/f:Index.aspx" caret="532" fromTop="3" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:TaskController.cs" caret="1201" fromTop="17" />
+      <File id="CE1DC5ED-4F36-4A50-AF00-7248775AB76C/d:Controllers/f:TaskController.cs" caret="3003" fromTop="20" />
+      <File id="7F79884B-4B28-4ECF-927B-9B4B3C45C2A3/f:StandardModel.edmx.sql" caret="6851" fromTop="6" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

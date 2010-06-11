@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataSyncModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DataSyncModelStoreContainer">
+    <EntitySet Name="TaskMaster" EntityType="DataSyncModel.Store.TaskMaster" store:Type="Tables" Schema="adminTest" />
+    <EntitySet Name="UserMaster" EntityType="DataSyncModel.Store.UserMaster" store:Type="Tables" Schema="adminTest" />
+    <EntitySet Name="UserMasterMetadata" EntityType="DataSyncModel.Store.UserMasterMetadata" store:Type="Tables" Schema="adminTest" />
+    <EntitySet Name="Status" EntityType="DataSyncModel.Store.Status" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_TaskMaster_Status" Association="DataSyncModel.Store.FK_TaskMaster_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="TaskMaster" EntitySet="TaskMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TaskMaster_UserMaster" Association="DataSyncModel.Store.FK_TaskMaster_UserMaster">
+      <End Role="UserMaster" EntitySet="UserMaster" />
+      <End Role="TaskMaster" EntitySet="TaskMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserMaster_Status" Association="DataSyncModel.Store.FK_UserMaster_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="UserMaster" EntitySet="UserMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserMasterMetadata_UserMaster" Association="DataSyncModel.Store.FK_UserMasterMetadata_UserMaster">
+      <End Role="UserMaster" EntitySet="UserMaster" />
+      <End Role="UserMasterMetadata" EntitySet="UserMasterMetadata" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TaskMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Detail" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="StatusId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Prority" Type="varchar" MaxLength="50" />
+    <Property Name="UserId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="UserMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="StatusId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserMasterMetadata">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Value" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="UserId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_TaskMaster_Status">
+    <End Role="Status" Type="DataSyncModel.Store.Status" Multiplicity="1" />
+    <End Role="TaskMaster" Type="DataSyncModel.Store.TaskMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TaskMaster">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TaskMaster_UserMaster">
+    <End Role="UserMaster" Type="DataSyncModel.Store.UserMaster" Multiplicity="0..1" />
+    <End Role="TaskMaster" Type="DataSyncModel.Store.TaskMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserMaster">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TaskMaster">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserMaster_Status">
+    <End Role="Status" Type="DataSyncModel.Store.Status" Multiplicity="1" />
+    <End Role="UserMaster" Type="DataSyncModel.Store.UserMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserMaster">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserMasterMetadata_UserMaster">
+    <End Role="UserMaster" Type="DataSyncModel.Store.UserMaster" Multiplicity="0..1" />
+    <End Role="UserMasterMetadata" Type="DataSyncModel.Store.UserMasterMetadata" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserMaster">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserMasterMetadata">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>
